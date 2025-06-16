@@ -1,0 +1,8 @@
+TTY = клавиша e 
+в конце строки  линукс systemd.unit=multi-user.target
+ctrl + x
+
+
+sudo systemctl daemon-reload                                                                                   ─╯
+sudo systemctl reset-failed psiphon.service
+sudo systemctl enable --now psiphon.service
