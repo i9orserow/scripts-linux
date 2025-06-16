@@ -1,0 +1,12 @@
+[Unit]
+Description=Psiphon autostart
+After=network.target
+
+[Service]
+ExecStart=/bin/bash -c 'while true; do /usr/bin/psiphon; sleep 5; done'
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=0
+
+[Install]
+WantedBy=multi-user.target
