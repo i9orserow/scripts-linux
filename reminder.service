@@ -1,0 +1,10 @@
+[Unit]
+Description=Напоминание о таблетках
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/jonesilverhand/scripts/napominanie.py
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
