@@ -1,0 +1,13 @@
+[Unit]
+Description=Автоматическое выключение при простое
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/jonesilverhand/scripts/shutdown.py
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
